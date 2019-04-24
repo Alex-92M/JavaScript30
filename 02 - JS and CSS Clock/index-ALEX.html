@@ -96,6 +96,12 @@
       const mins = now.getMinutes();
       const minsDegrees = ((mins / 60) * 360) + 90;
 
+      if (mins === 0)  {
+        minsHand.classList.add('notransition');
+      } else {
+        minsHand.classList.remove('notransition');
+      }
+
       minsHand.style.transform = `rotate(${minsDegrees}deg)`;
 
       const hours = now.getHours();
